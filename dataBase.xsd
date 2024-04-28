@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- UTIL TYPES -->
+    <!-- Bounded string -->
+    <xs:simpleType name="boundedString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="0"></xs:minLength>
+            <xs:maxLength value="255"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Price -->
+    <xs:simpleType name="price">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0.01"></xs:minInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Positive count -->
+    <xs:simpleType name="positiveCount">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"></xs:minInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Percent discount -->
+    <xs:simpleType name="percentDiscount">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"></xs:minInclusive>
+            <xs:maxInclusive value="100"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- OBJECT TYPES -->
+    <!-- Client -->
+    <xs:complexType name="client">
+        <xs:sequence>
+            <xs:element name="surname" type="boundedString"></xs:element>
+            <xs:element name="name" type="boundedString"></xs:element>
+            <xs:element name="patronymic" type="boundedString"></xs:element>
+            <xs:element name="country" type="boundedString"></xs:element>
+            <xs:element name="region" type="boundedString"></xs:element>
+            <xs:element name="city" type="boundedString"></xs:element>
+            <xs:element name="phoneNumber" type="boundedString"></xs:element>
+            <xs:element name="index" type="boundedString"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="clientId" type="xs:int" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <!-- Employee -->
+    <xs:complexType name="employee">
+        <xs:sequence>
+            <xs:element name="surname" type="boundedString"></xs:element>
+            <xs:element name="name" type="boundedString"></xs:element>
+            <xs:element name="patronymic" type="boundedString"></xs:element>
+            <xs:element name="jobTitle" type="boundedString"></xs:element>
+            <xs:element name="birthday" type="xs:date"></xs:element>
+            <xs:element name="hireDate" type="xs:date"></xs:element>
+            <xs:element name="country" type="boundedString"></xs:element>
+            <xs:element name="region" type="boundedString"></xs:element>
+            <xs:element name="city" type="boundedString"></xs:element>
+            <xs:element name="district" type="boundedString"></xs:element>
+            <xs:element name="street" type="boundedString"></xs:element>
+            <xs:element name="houseNumber" type="boundedString"></xs:element>
+            <xs:element name="apartamentNumber" type="boundedString"></xs:element>
+            <xs:element name="phoneNumber" type="boundedString"></xs:element>
+            <xs:element name="photoUrl" type="boundedString"></xs:element>
+            <xs:element name="note" type="boundedString"></xs:element>
+            <xs:element name="reportsTo" type="boundedString"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="employeeId" type="xs:int" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <!-- Employee in order -->
+    <xs:complexType name="employeeInOrder">
+        <xs:sequence>
+            <xs:element ref="employee"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Employees in order -->
+    <xs:complexType name="employeesInOrder">
+        <xs:sequence>
+            <xs:element ref="employeeInOrder" minOccurs="1" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Provider -->
+    <xs:complexType name="provider">
+        <xs:sequence>
+            <xs:element name="name" type="boundedString"></xs:element>
+            <xs:element name="speakTo" type="boundedString"></xs:element>
+            <xs:element name="jobTitle" type="boundedString"></xs:element>
+            <xs:element name="country" type="boundedString"></xs:element>
+            <xs:element name="region" type="boundedString"></xs:element>
+            <xs:element name="city" type="boundedString"></xs:element>
+            <xs:element name="index" type="boundedString"></xs:element>
+            <xs:element name="phoneNumber" type="boundedString"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="providerId" type="xs:int" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <!-- Affilation type -->
+    <xs:complexType name="affilationType">
+        <xs:sequence>
+            <xs:element name="category" type="boundedString"></xs:element>
+            <xs:element name="description" type="boundedString"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="typeId" type="xs:int" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <!-- Funeral affilation -->
+    <xs:complexType name="funeralAffilation">
+        <xs:sequence>
+            <xs:element name="name" type="boundedString"></xs:element>
+            <xs:element ref="provider"></xs:element>
+            <xs:element ref="affilationType"></xs:element>
+            <xs:element name="unit" type="boundedString"></xs:element>
+            <xs:element name="price" type="price"></xs:element>
+            <xs:element name="inStorage" type="xs:int"></xs:element>
+            <xs:element name="expected" type="xs:int"></xs:element>
+            <xs:element name="suppliesStopped" type="xs:boolean"></xs:element>
+            <xs:element name="photoUrl" type="boundedString"></xs:element>
+            <xs:element name="description" type="boundedString"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="affilationId" type="xs:int" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <!-- Ordered affilation -->
+    <xs:complexType name="orderedAffilation">
+        <xs:sequence>
+            <xs:element ref="funeralAffilation"></xs:element>
+            <xs:element name="price" type="price"></xs:element>
+            <xs:element name="affilationCount" type="positiveCount"></xs:element>
+            <xs:element name="percentDiscount" type="percentDiscount"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Ordered affilations -->
+    <xs:complexType name="orderedAffilations">
+        <xs:sequence>
+            <xs:element ref="orderedAffilation" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Service -->
+    <xs:complexType name="service">
+        <xs:sequence>
+            <xs:element name="name" type="boundedString"></xs:element>
+            <xs:element name="description" type="boundedString"></xs:element>
+            <xs:element name="price" type="price"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="serviceId" type="xs:int" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <!-- Ordered service -->
+    <xs:complexType name="orderedService">
+        <xs:sequence>
+            <xs:element ref="service"></xs:element>
+            <xs:element name="price" type="price"></xs:element>
+            <xs:element name="percentDiscount" type="percentDiscount"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Ordered services -->
+    <xs:complexType name="orderedServices">
+        <xs:sequence>
+            <xs:element ref="orderedService" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Order -->
+    <xs:complexType name="order">
+        <xs:sequence>
+            <xs:element ref="client"></xs:element>
+            <xs:element name="registrationDate" type="xs:date"></xs:element>
+            <xs:element name="appointmentDate" type="xs:date"></xs:element>
+            <xs:element name="executionDate" type="xs:date"></xs:element>
+            <!-- employees -->
+            <xs:element ref="employeesInOrder"></xs:element>
+            <!-- services -->
+            <xs:element ref="orderedServices"></xs:element>
+            <!-- affilations -->
+            <xs:element ref="orderedAffilations"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="orderId" type="xs:int" use="required"></xs:attribute>
+    </xs:complexType>
+
+    <!-- Orders -->
+    <xs:complexType name="orders">
+        <xs:sequence>
+            <xs:element ref="order" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Funeral service -->
+    <xs:complexType name="funeralService">
+        <xs:sequence>
+            <xs:element ref="orders" minOccurs="0" maxOccurs="1"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!-- ELEMENTS -->
+    <!-- Client -->
+    <xs:element name="client" type="client" />
+
+    <!-- Employee -->
+    <xs:element name="employee" type="employee" />
+
+    <!-- Employee in order -->
+    <xs:element name="employeeInOrder" type="employeeInOrder" />
+
+    <!-- employeesInOrder -->
+    <xs:element name="employeesInOrder" type="employeesInOrder" />
+
+    <!-- Provider -->
+    <xs:element name="provider" type="provider" />
+
+    <!-- Affilation type -->
+    <xs:element name="affilationType" type="affilationType" />
+
+    <!-- Funeral affilation -->
+    <xs:element name="funeralAffilation" type="funeralAffilation" />
+
+    <!-- Ordered affilation -->
+    <xs:element name="orderedAffilation" type="orderedAffilation" />
+
+    <!-- Orderes affilations -->
+    <xs:element name="orderedAffilations" type="orderedAffilations" />
+
+    <!-- Service -->
+    <xs:element name="service" type="service" />
+
+    <!-- Ordered service -->
+    <xs:element name="orderedService" type="orderedService" />
+
+    <!-- Ordered services -->
+    <xs:element name="orderedServices" type="orderedServices" />
+
+    <!-- Order -->
+    <xs:element name="order" type="order" />
+
+    <!-- Orders -->
+    <xs:element name="orders" type="orders" />
+
+    <!-- Funeral service (root element) -->
+    <xs:element name="funeralService" type="funeralService" />
+</xs:schema>

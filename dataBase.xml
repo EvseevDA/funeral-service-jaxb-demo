@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="dataBase.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<funeralService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="dataBase.xsd">
+
+    <orders>
+        <order orderId="0">
+            <client clientId="0">
+                <surname>Пушкин</surname>
+                <name>Александр</name>
+                <patronymic>Александрович</patronymic>
+                <country>Россия</country>
+                <region>Нижегородская</region>
+                <city>Нижний Новгород</city>
+                <phoneNumber>+7-(920)-253-44-23</phoneNumber>
+                <index>603155</index>
+            </client>
+            <registrationDate>2020-07-08</registrationDate>
+            <appointmentDate>2020-07-23</appointmentDate>
+            <executionDate>2020-07-23</executionDate>
+            <employeesInOrder>
+                <employeeInOrder>
+                    <employee employeeId="0">
+                        <surname>Сергеев</surname>
+                        <name>Сергей</name>
+                        <patronymic>Сергеевич</patronymic>
+                        <jobTitle>Ритуальный агент</jobTitle>
+                        <birthday>1999-06-23</birthday>
+                        <hireDate>2020-05-05</hireDate>
+                        <country>Россия</country>
+                        <region>Нижегородская</region>
+                        <city>Нижний Новгород</city>
+                        <district>Нижегородский</district>
+                        <street>Карла Маркса</street>
+                        <houseNumber>64А</houseNumber>
+                        <apartamentNumber>105</apartamentNumber>
+                        <phoneNumber>+7-(999)-340-53-98</phoneNumber>
+                        <photoUrl></photoUrl>
+                        <note>Молодец</note>
+                        <reportsTo>Вита Скалетта</reportsTo>
+                    </employee>
+                </employeeInOrder>
+                <employeeInOrder>
+                    <employee employeeId="1">
+                        <surname>Александров</surname>
+                        <name>Александр</name>
+                        <patronymic>Александрович</patronymic>
+                        <jobTitle>Водитель</jobTitle>
+                        <birthday>2000-05-14</birthday>
+                        <hireDate>2020-05-14</hireDate>
+                        <country>Россия</country>
+                        <region>Нижегородская</region>
+                        <city>Нижний Новгород</city>
+                        <district>Нижегородская</district>
+                        <street>Долгополова</street>
+                        <houseNumber>101</houseNumber>
+                        <apartamentNumber>125</apartamentNumber>
+                        <phoneNumber>+7-(930)-543-03-23</phoneNumber>
+                        <photoUrl></photoUrl>
+                        <note>Молодец</note>
+                        <reportsTo>Вита Скалетта</reportsTo>
+                    </employee>
+                </employeeInOrder>
+                <employeeInOrder>
+                    <employee employeeId="2">
+                        <surname>Федоров</surname>
+                        <name>Федор</name>
+                        <patronymic>Федорович</patronymic>
+                        <jobTitle>Сотрудник сопроводительной бригады</jobTitle>
+                        <birthday>2002-03-25</birthday>
+                        <hireDate>2020-05-21</hireDate>
+                        <country>Россия</country>
+                        <region>Нижегородская</region>
+                        <city>Нижний Новгород</city>
+                        <district>Нижегородская</district>
+                        <street>Фруктовая</street>
+                        <houseNumber>87</houseNumber>
+                        <apartamentNumber>89</apartamentNumber>
+                        <phoneNumber>+7-(943)-786-55-12</phoneNumber>
+                        <photoUrl></photoUrl>
+                        <note>Молодец</note>
+                        <reportsTo>Вита Скалетта</reportsTo>
+                    </employee>
+                </employeeInOrder>
+                <employeeInOrder>
+                    <employee employeeId="3">
+                        <surname>Барбара</surname>
+                        <name>Джо</name>
+                        <patronymic></patronymic>
+                        <jobTitle>Сотрудник сопроводительной бригады</jobTitle>
+                        <birthday>1980-07-30</birthday>
+                        <hireDate>2020-05-28</hireDate>
+                        <country>Россия</country>
+                        <region>Нижегородская</region>
+                        <city>Нижний Новгород</city>
+                        <district>Нижегородская</district>
+                        <street>Лопатина</street>
+                        <houseNumber>90</houseNumber>
+                        <apartamentNumber>23</apartamentNumber>
+                        <phoneNumber>+7-(920)-141-89-02</phoneNumber>
+                        <photoUrl></photoUrl>
+                        <note>Молодец</note>
+                        <reportsTo>Вита Скалетта</reportsTo>
+                    </employee>
+                </employeeInOrder>
+            </employeesInOrder>
+            <orderedServices>
+                <orderedService>
+                    <service serviceId="0">
+                        <name>Катафалк</name>
+                        <description>Рассчитан на 10 гостией</description>
+                        <price>4490.90</price>
+                    </service>
+                    <price>4490.90</price>
+                    <percentDiscount>0</percentDiscount>
+                </orderedService>
+                <orderedService>
+                    <service serviceId="1">
+                        <name>Бальзамирование</name>
+                        <description></description>
+                        <price>3490.90</price>
+                    </service>
+                    <price>3490.90</price>
+                    <percentDiscount>0</percentDiscount>
+                </orderedService>
+            </orderedServices>
+            <orderedAffilations>
+                <orderedAffilation>
+                    <funeralAffilation affilationId="0">
+                        <name>Гроб Г3 Деревянный</name>
+                        <provider providerId="0">
+                            <name>ИП Джаник Абдыбеков</name>
+                            <speakTo>Джаник Абдыбеков</speakTo>
+                            <jobTitle>Владелец и основатель</jobTitle>
+                            <country>Россия</country>
+                            <region>Московская</region>
+                            <city>Москва</city>
+                            <index>101103</index>
+                            <phoneNumber>+7-(800)-900-40-40</phoneNumber>
+                        </provider>
+                        <affilationType typeId="0">
+                            <category>Гроб</category>
+                            <description></description>
+                        </affilationType>
+                        <unit>шт.</unit>
+                        <price>7990.90</price>
+                        <inStorage>10</inStorage>
+                        <expected>5</expected>
+                        <suppliesStopped>false</suppliesStopped>
+                        <photoUrl></photoUrl>
+                        <description></description>
+                    </funeralAffilation>
+                    <price>7990.90</price>
+                    <affilationCount>1</affilationCount>
+                    <percentDiscount>0</percentDiscount>
+                </orderedAffilation>
+                <orderedAffilation>
+                    <funeralAffilation affilationId="1">
+                        <name>Венок В1 "Арбуз"</name>
+                        <provider providerId="1">
+                            <name>ИП Лео Галанте</name>
+                            <speakTo>Лео Галанте</speakTo>
+                            <jobTitle>Владелец и основатель</jobTitle>
+                            <country>Италия</country>
+                            <region>Сицилийская</region>
+                            <city>Сицилия</city>
+                            <index>9338-12</index>
+                            <phoneNumber>+7-(800)-999-09-90</phoneNumber>
+                        </provider>
+                        <affilationType typeId="1">
+                            <category>Венок</category>
+                            <description></description>
+                        </affilationType>
+                        <unit>шт.</unit>
+                        <price>2990.90</price>
+                        <inStorage>13</inStorage>
+                        <expected>7</expected>
+                        <suppliesStopped>false</suppliesStopped>
+                        <photoUrl></photoUrl>
+                        <description></description>
+                    </funeralAffilation>
+                    <price>2990.90</price>
+                    <affilationCount>1</affilationCount>
+                    <percentDiscount>0</percentDiscount>
+                </orderedAffilation>
+            </orderedAffilations>
+        </order>
+
+        <order orderId="1">
+            <client clientId="1">
+                <surname>Толстой</surname>
+                <name>Лев</name>
+                <patronymic>Николаевич</patronymic>
+                <country>Россия</country>
+                <region>Нижегородская</region>
+                <city>Нижний Новгород</city>
+                <phoneNumber>+7-(920)-253-44-23</phoneNumber>
+                <index>603155</index>
+            </client>
+            <registrationDate>2020-07-08</registrationDate>
+            <appointmentDate>2020-07-23</appointmentDate>
+            <executionDate>2020-07-23</executionDate>
+            <employeesInOrder>
+                <employeeInOrder>
+                    <employee employeeId="0">
+                        <surname>Сергеев</surname>
+                        <name>Сергей</name>
+                        <patronymic>Сергеевич</patronymic>
+                        <jobTitle>Ритуальный агент</jobTitle>
+                        <birthday>1999-06-23</birthday>
+                        <hireDate>2020-05-05</hireDate>
+                        <country>Россия</country>
+                        <region>Нижегородская</region>
+                        <city>Нижний Новгород</city>
+                        <district>Нижегородская</district>
+                        <street>Карла Маркса</street>
+                        <houseNumber>64А</houseNumber>
+                        <apartamentNumber>105</apartamentNumber>
+                        <phoneNumber>+7-(999)-340-53-98</phoneNumber>
+                        <photoUrl></photoUrl>
+                        <note>Молодец</note>
+                        <reportsTo>Вита Скалетта</reportsTo>
+                    </employee>
+                </employeeInOrder>
+                <employeeInOrder>
+                    <employee employeeId="1">
+                        <surname>Александров</surname>
+                        <name>Александр</name>
+                        <patronymic>Александрович</patronymic>
+                        <jobTitle>Водитель</jobTitle>
+                        <birthday>2000-05-14</birthday>
+                        <hireDate>2020-05-14</hireDate>
+                        <country>Россия</country>
+                        <region>Нижегородская</region>
+                        <city>Нижний Новгород</city>
+                        <district>Нижегородская</district>
+                        <street>Долгополова</street>
+                        <houseNumber>101</houseNumber>
+                        <apartamentNumber>125</apartamentNumber>
+                        <phoneNumber>+7-(930)-543-03-23</phoneNumber>
+                        <photoUrl></photoUrl>
+                        <note>Молодец</note>
+                        <reportsTo>Вита Скалетта</reportsTo>
+                    </employee>
+                </employeeInOrder>
+                <employeeInOrder>
+                    <employee employeeId="2">
+                        <surname>Федоров</surname>
+                        <name>Федор</name>
+                        <patronymic>Федорович</patronymic>
+                        <jobTitle>Сотрудник сопроводительной бригады</jobTitle>
+                        <birthday>2002-03-25</birthday>
+                        <hireDate>2020-05-21</hireDate>
+                        <country>Россия</country>
+                        <region>Нижегородская</region>
+                        <city>Нижний Новгород</city>
+                        <district>Нижегородская</district>
+                        <street>Фруктовая</street>
+                        <houseNumber>87</houseNumber>
+                        <apartamentNumber>89</apartamentNumber>
+                        <phoneNumber>+7-(943)-786-55-12</phoneNumber>
+                        <photoUrl></photoUrl>
+                        <note>Молодец</note>
+                        <reportsTo>Вита Скалетта</reportsTo>
+                    </employee>
+                </employeeInOrder>
+                <employeeInOrder>
+                    <employee employeeId="3">
+                        <surname>Барбара</surname>
+                        <name>Джо</name>
+                        <patronymic></patronymic>
+                        <jobTitle>Сотрудник сопроводительной бригады</jobTitle>
+                        <birthday>1980-07-30</birthday>
+                        <hireDate>2020-05-28</hireDate>
+                        <country>Россия</country>
+                        <region>Нижегородская</region>
+                        <city>Нижний Новгород</city>
+                        <district>Нижегородская</district>
+                        <street>Лопатина</street>
+                        <houseNumber>90</houseNumber>
+                        <apartamentNumber>23</apartamentNumber>
+                        <phoneNumber>+7-(920)-141-89-02</phoneNumber>
+                        <photoUrl></photoUrl>
+                        <note>Молодец</note>
+                        <reportsTo>Вита Скалетта</reportsTo>
+                    </employee>
+                </employeeInOrder>
+            </employeesInOrder>
+            <orderedServices>
+                <orderedService>
+                    <service serviceId="0">
+                        <name>Катафалк</name>
+                        <description>Рассчитан на 10 гостией</description>
+                        <price>4490.90</price>
+                    </service>
+                    <price>4490.90</price>
+                    <percentDiscount>0</percentDiscount>
+                </orderedService>
+                <orderedService>
+                    <service serviceId="1">
+                        <name>Бальзамирование</name>
+                        <description></description>
+                        <price>3490.90</price>
+                    </service>
+                    <price>3490.90</price>
+                    <percentDiscount>0</percentDiscount>
+                </orderedService>
+            </orderedServices>
+            <orderedAffilations>
+                <orderedAffilation>
+                    <funeralAffilation affilationId="0">
+                        <name>Гроб Г3 Деревянный</name>
+                        <provider providerId="0">
+                            <name>ИП Джаник Абдыбеков</name>
+                            <speakTo>Джаник Абдыбеков</speakTo>
+                            <jobTitle>Владелец и основатель</jobTitle>
+                            <country>Россия</country>
+                            <region>Московская</region>
+                            <city>Москва</city>
+                            <index>101103</index>
+                            <phoneNumber>+7-(800)-900-40-40</phoneNumber>
+                        </provider>
+                        <affilationType typeId="0">
+                            <category>Гроб</category>
+                            <description></description>
+                        </affilationType>
+                        <unit>шт.</unit>
+                        <price>7990.90</price>
+                        <inStorage>10</inStorage>
+                        <expected>5</expected>
+                        <suppliesStopped>false</suppliesStopped>
+                        <photoUrl></photoUrl>
+                        <description></description>
+                    </funeralAffilation>
+                    <price>7990.90</price>
+                    <affilationCount>1</affilationCount>
+                    <percentDiscount>0</percentDiscount>
+                </orderedAffilation>
+                <orderedAffilation>
+                    <funeralAffilation affilationId="1">
+                        <name>Венок В1 "Арбуз"</name>
+                        <provider providerId="1">
+                            <name>ИП Лео Галанте</name>
+                            <speakTo>Лео Галанте</speakTo>
+                            <jobTitle>Владелец и основатель</jobTitle>
+                            <country>Италия</country>
+                            <region>Сицилийская</region>
+                            <city>Сицилия</city>
+                            <index>9338-12</index>
+                            <phoneNumber>+7-(800)-999-09-90</phoneNumber>
+                        </provider>
+                        <affilationType typeId="1">
+                            <category>Венок</category>
+                            <description></description>
+                        </affilationType>
+                        <unit>шт.</unit>
+                        <price>2990.90</price>
+                        <inStorage>13</inStorage>
+                        <expected>7</expected>
+                        <suppliesStopped>false</suppliesStopped>
+                        <photoUrl></photoUrl>
+                        <description></description>
+                    </funeralAffilation>
+                    <price>2990.90</price>
+                    <affilationCount>1</affilationCount>
+                    <percentDiscount>0</percentDiscount>
+                </orderedAffilation>
+            </orderedAffilations>
+        </order>
+    </orders>
+
+</funeralService>
