@@ -39,6 +39,6 @@ public class Main {
     }
 
     static void printList(List<?> list, String separator) {
-        list.forEach(e -> System.out.print(Objects.toString(e) + separator));
+        list.forEach(e -> System.out.print(e + separator));
     }
 }
