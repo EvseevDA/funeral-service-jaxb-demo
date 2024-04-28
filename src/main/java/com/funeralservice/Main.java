@@ -36,8 +36,6 @@ public class Main {
         clientServiceXPath
                 .getById(0)
                 .ifPresent(c -> printList(c, "\n"));
-
-        System.out.println(0);
     }
 
     static void printList(List<?> list, String separator) {
